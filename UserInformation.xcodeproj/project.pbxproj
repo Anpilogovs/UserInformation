@@ -26,6 +26,7 @@
 		F3B2D04D29AFDEEA006F8139 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2D04C29AFDEEA006F8139 /* UserModel.swift */; };
 		F3B2D05029AFDFDF006F8139 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2D04F29AFDFDF006F8139 /* UserDefaultsHelper.swift */; };
 		F3B2D05229AFF917006F8139 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2D05129AFF917006F8139 /* UIViewController + Extension.swift */; };
+		F3B2D05429AFFCB0006F8139 /* UIBarButtonItem + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2D05329AFFCB0006F8139 /* UIBarButtonItem + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		F3B2D04C29AFDEEA006F8139 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F3B2D04F29AFDFDF006F8139 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		F3B2D05129AFF917006F8139 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		F3B2D05329AFFCB0006F8139 /* UIBarButtonItem + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				F3B2D03229AD1B19006F8139 /* UIView + Extension.swift */,
 				F3B2D05129AFF917006F8139 /* UIViewController + Extension.swift */,
+				F3B2D05329AFFCB0006F8139 /* UIBarButtonItem + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				F3B2D04429AE7F04006F8139 /* PickerViewTableViewCell.swift in Sources */,
 				F3B2D04D29AFDEEA006F8139 /* UserModel.swift in Sources */,
 				F3B2D05229AFF917006F8139 /* UIViewController + Extension.swift in Sources */,
+				F3B2D05429AFFCB0006F8139 /* UIBarButtonItem + Extension.swift in Sources */,
 				F3B2D03E29AE060D006F8139 /* TextViewTableViewCell.swift in Sources */,
 				F3B2D04A29AFD89B006F8139 /* EditingTableView.swift in Sources */,
 				F3B2D01429AD12E2006F8139 /* AppDelegate.swift in Sources */,
