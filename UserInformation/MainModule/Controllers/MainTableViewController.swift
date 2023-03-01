@@ -7,13 +7,14 @@
 
 import UIKit
 
-class MainTableViewController: UITableViewController {
+final class MainTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
-        tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.idMainTableViewCell)
+        tableView.register(MainTableViewCell.self,
+                           forCellReuseIdentifier: MainTableViewCell.idMainTableViewCell)
     }
     
     private func setupViews() {
@@ -27,8 +28,9 @@ class MainTableViewController: UITableViewController {
     }
     
     @objc private func editingTapped() {
-        let editinTableViewController = EditingTableViewController()
-        navigationController?.pushViewController(editinTableViewController, animated: true)
+        let editinViewController = EditingViewController()
+        navigationItem.backButtonTitle = "Back"
+        navigationController?.pushViewController(editinViewController, animated: true)
     }
 }
 //MARK: - UITableViewController

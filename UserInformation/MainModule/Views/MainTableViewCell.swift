@@ -11,10 +11,12 @@ import UIKit
 class MainTableViewCell: UITableViewCell {
     
     private let nameLabel = UILabel()
+    
     private let valueLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .right
         label.text = "Test"
+        label.font = Recoursec.Fonts.avenirNextRegular(with: 18)
         label.numberOfLines = 0
         return label
     }()
@@ -23,8 +25,9 @@ class MainTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         setupViews()
-        setContraints()
+        setConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -33,6 +36,10 @@ class MainTableViewCell: UITableViewCell {
     }
     
     private func setupViews() {
+        selectionStyle = .none
+        
+        nameLabel.font = Recoursec.Fonts.avenirNextRegular(with: 18)
+        
         addView(nameLabel)
         addView(valueLabel)
     }
@@ -43,20 +50,20 @@ class MainTableViewCell: UITableViewCell {
 }
 
 extension MainTableViewCell {
-    private func setContraints() {
+    
+    private func setConstraints() {
         NSLayoutConstraint.activate([
             
             heightAnchor.constraint(greaterThanOrEqualToConstant: 44),
             
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            nameLabel.widthAnchor.constraint(equalTo: widthAnchor, constant: 0.35),
-       
-            valueLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            valueLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+            nameLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.35),
+            
             valueLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             valueLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            valueLabel.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 10)
+            valueLabel.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 10),
+            valueLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
         ])
     }
 }

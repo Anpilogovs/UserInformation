@@ -18,7 +18,7 @@ class NameTextView: UITextView {
     }
     
     private func configure() {
-        text = "Input date"
+        text = "Enter the data"
         textColor = .lightGray
         textAlignment = .right
         isScrollEnabled = false

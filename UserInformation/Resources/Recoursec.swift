@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Recoursec {
     
@@ -15,5 +16,18 @@ enum Recoursec {
         case thirdName = "Surname"
         case dateBirtday = "Birthday"
         case gender = "Gender"
+    }
+    
+    
+    enum Ganger: String, CaseIterable {
+        case noSpecified = "Not pointed"
+        case man = "male"
+        case woman = "female"
+    }
+    
+    enum Fonts {
+        static func avenirNextRegular(with size: CGFloat) -> UIFont? {
+            UIFont(name: "Avenir Next", size: size)
+        }
     }
 }
