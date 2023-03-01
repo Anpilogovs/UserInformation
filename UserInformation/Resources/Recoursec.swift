@@ -14,7 +14,7 @@ enum Recoursec {
         case firstName = "Name"
         case secondName = "Last name"
         case thirdName = "Surname"
-        case dateBirtday = "Birthday"
+        case birthDay = "Birthday"
         case gender = "Gender"
     }
     
