@@ -8,7 +8,6 @@
 import UIKit
 
 final class MainTableViewController: UITableViewController {
-
     
     private var userModel = UserModel()
     
@@ -17,8 +16,10 @@ final class MainTableViewController: UITableViewController {
         
         setupViews()
         getUserModel()
-        tableView.register(MainTableViewCell.self,
-                           forCellReuseIdentifier: MainTableViewCell.idMainTableViewCell)
+        //        tableView.register(MainTableViewCell.self,
+        //                           forCellReuseIdentifier: MainTableViewCell.idMainTableViewCell)
+        
+        tableView.register(MainTableViewCell.self)
     }
     
     private func setupViews() {
@@ -50,12 +51,14 @@ extension MainTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.idMainTableViewCell , for: indexPath) as? MainTableViewCell else {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.idMainTableViewCell , for: indexPath) as? MainTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(MainTableViewCell.self) else {
             return UITableViewCell()
         }
         
         let nameFiled = Recoursec.NameFields.allCases[indexPath.row].rawValue
-        cell.configure(name: nameFiled)
+        let value = UserDefaultsHelper.getUserValue(Recoursec.NameFields.allCases[indexPath.row].rawValue)
+        cell.configure(name: nameFiled, value: value)
         return cell
     }
 }

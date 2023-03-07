@@ -5,7 +5,6 @@
 //  Created by Сергей Анпилогов on 27.02.2023.
 //
 
-import Foundation
 import UIKit
 
 enum Recoursec {
@@ -17,7 +16,6 @@ enum Recoursec {
         case birthDay = "Birthday"
         case gender = "Gender"
     }
-    
     
     enum Ganger: String, CaseIterable {
         case noSpecified = "Not pointed"

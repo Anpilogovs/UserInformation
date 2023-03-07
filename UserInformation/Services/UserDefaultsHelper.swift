@@ -9,7 +9,6 @@ import Foundation
 
 final class UserDefaultsHelper {
     
-    
     private static let defaults = UserDefaults.standard
     private static let userSessionKey = "userKey"
     

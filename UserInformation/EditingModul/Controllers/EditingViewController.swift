@@ -41,6 +41,7 @@ final class EditingViewController: UIViewController {
                                                             action: #selector(saveTapped))
         let backBarButtonItem = UIBarButtonItem.createCustomButton(vc: self, selector: #selector(backButtonTapped))
         navigationItem.leftBarButtonItem = backBarButtonItem
+        editingTableView.setUserModel(userModel)
         view.addView(editingTableView)
     }
     
