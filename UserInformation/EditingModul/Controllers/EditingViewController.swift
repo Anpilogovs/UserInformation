@@ -46,9 +46,12 @@ final class EditingViewController: UIViewController {
     }
     
     @objc private func saveTapped() {
-        print("tap")
         
         
+//
+//        let editUserModel = editingTableView.getUserModel()
+//        print(editUserModel == userModel)
+//
         if authFields() {
             presentSimpleAlert(title: "done", message: "Fill all the obligatory fields")
         } else {
@@ -58,11 +61,17 @@ final class EditingViewController: UIViewController {
     
     @objc private func backButtonTapped() {
         
-        presentChangeAlert { value in
-            if value == true {
-                self.navigationController?.popViewController(animated: true)
-            } else {
-                self.navigationController?.popViewController(animated: true)
+        let editUserModel = editingTableView.getUserModel
+        if editUserModel == userModel {
+            navigationController?.popViewController(animated: true)
+        } else {
+            presentChangeAlert { value in
+                //Model
+                if value == true {
+                    self.navigationController?.popViewController(animated: true)
+                } else {
+                    self.navigationController?.popViewController(animated: true)
+                }
             }
         }
     }

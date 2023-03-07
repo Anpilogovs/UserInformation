@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F393489729B771C000228412 /* UITableView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393489629B771C000228412 /* UITableView + Extensions.swift */; };
+		F393489929B7791400228412 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393489829B7791400228412 /* String + Extensions.swift */; };
+		F393489B29B7796D00228412 /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393489A29B7796D00228412 /* Date + Extensions.swift */; };
 		F3B2D01429AD12E2006F8139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2D01329AD12E2006F8139 /* AppDelegate.swift */; };
 		F3B2D01829AD12E2006F8139 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2D01729AD12E2006F8139 /* MainTableViewController.swift */; };
 		F3B2D01D29AD12E5006F8139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B2D01C29AD12E5006F8139 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		F393489629B771C000228412 /* UITableView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Extensions.swift"; sourceTree = "<group>"; };
+		F393489829B7791400228412 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
+		F393489A29B7796D00228412 /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
 		F3B2D01029AD12E2006F8139 /* UserInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B2D01329AD12E2006F8139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3B2D01729AD12E2006F8139 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 				F3B2D05129AFF917006F8139 /* UIViewController + Extensions.swift */,
 				F3B2D05329AFFCB0006F8139 /* UIBarButtonItem + Extensions.swift */,
 				F393489629B771C000228412 /* UITableView + Extensions.swift */,
+				F393489829B7791400228412 /* String + Extensions.swift */,
+				F393489A29B7796D00228412 /* Date + Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -306,10 +312,12 @@
 				F3B2D04429AE7F04006F8139 /* PickerViewTableViewCell.swift in Sources */,
 				F3B2D04D29AFDEEA006F8139 /* UserModel.swift in Sources */,
 				F3B2D05229AFF917006F8139 /* UIViewController + Extensions.swift in Sources */,
+				F393489B29B7796D00228412 /* Date + Extensions.swift in Sources */,
 				F3B2D05429AFFCB0006F8139 /* UIBarButtonItem + Extensions.swift in Sources */,
 				F3B2D03E29AE060D006F8139 /* TextViewTableViewCell.swift in Sources */,
 				F3B2D04A29AFD89B006F8139 /* EditingTableView.swift in Sources */,
 				F3B2D01429AD12E2006F8139 /* AppDelegate.swift in Sources */,
+				F393489929B7791400228412 /* String + Extensions.swift in Sources */,
 				F3B2D04829AE813D006F8139 /* GenderTextField.swift in Sources */,
 				F3B2D04229AE5E8F006F8139 /* DatePickerTableViewCell.swift in Sources */,
 				F393489729B771C000228412 /* UITableView + Extensions.swift in Sources */,

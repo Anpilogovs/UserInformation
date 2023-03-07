@@ -32,6 +32,28 @@ final class EditingTableView: UITableView {
     public func setUserModel(_ model: UserModel) {
         userModel = model
     }
+    
+    public func editUserModel() {
+        
+        guard let firstNameCell = self.cellForRow(at: [0,0]) as? TextViewTableViewCell,
+              let secondNameCell = self.cellForRow(at: [0,2]) as? TextViewTableViewCell,
+              let thirdNameCell = self.cellForRow(at: [0,2]) as? TextViewTableViewCell,
+              let birthsdayCell = self.cellForRow(at: [0,3]) as? DatePickerTableViewCell,
+              let genderCell = self.cellForRow(at: [0,4]) as? PickerViewTableViewCell else {
+            return
+        }
+        
+        userModel.thirdName = firstNameCell.getCellValue()
+        userModel.secondName = secondNameCell.getCellValue()
+        userModel.thirdName = thirdNameCell.getCellValue()
+        userModel.birthDay = birthsdayCell.getCellValue()
+        userModel.gender = genderCell.getCellValue()
+    }
+    
+    public func getUserModel() -> UserModel {
+        editUserModel()
+        return userModel
+    }
 }
 
 //MARK: - UITableViewController
@@ -51,26 +73,27 @@ extension EditingTableView: UITableViewDataSource {
             guard let cell = self.dequeueReusableCell(TextViewTableViewCell.self) else {
                 return UITableViewCell()
             }
+            
             cell.nameTextViewDelegate = self
-            if indexPath.row == 1 {
-                cell.configure(name: nameFiled, scrollEnable: false)
-            } else {
-                cell.configure(name: nameFiled, scrollEnable: true)
+            
+            switch indexPath.row {
+            case 0: cell.configure(name: nameFiled, scrollEnable: true, value: userModel.firstName)
+            case 1: cell.configure(name: nameFiled, scrollEnable: false, value: userModel.secondName)
+            default:
+                cell.configure(name: nameFiled, scrollEnable: true, value: userModel.thirdName)
             }
             return cell
-            
         case 3:
             guard let cell = self.dequeueReusableCell(DatePickerTableViewCell.self) else {
                 return UITableViewCell()
             }
-            cell.configure(name: nameFiled)
+            cell.configure(name: nameFiled, date: userModel.birthDay.getDateFromString())
             return cell
         case 4:
             guard let cell = self.dequeueReusableCell(PickerViewTableViewCell.self) else {
                 return UITableViewCell()
-                
             }
-            cell.configure(name: nameFiled)
+            cell.configure(name: nameFiled, value: userModel.gender)
             return cell
         default:
             return  UITableViewCell()

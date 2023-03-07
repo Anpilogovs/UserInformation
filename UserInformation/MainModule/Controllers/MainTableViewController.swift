@@ -41,6 +41,10 @@ final class MainTableViewController: UITableViewController {
     private func getUserModel() {
         userModel = UserDefaultsHelper.getUserModel()
     }
+    
+    private func changeUserModel(model: UserModel) {
+        print(model)
+    }
 }
 //MARK: - UITableViewController
 
