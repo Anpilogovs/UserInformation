@@ -23,8 +23,8 @@ class GenderTextField: UITextField {
         placeholder = "Enter the data"
         textAlignment = .right
         tintColor = .clear
-        font = Recoursec.Fonts.avenirNextRegular(with: 18)
-        let font = Recoursec.Fonts.avenirNextRegular(with: 18)
+        font = Resoursec.Fonts.avenirNextRegular(with: 18)
+        let font = Resoursec.Fonts.avenirNextRegular(with: 18)
         attributedPlaceholder = NSAttributedString(string: "Enter the data", attributes: [.foregroundColor : UIColor.lightGray, .font : font as Any])
     }
 //    Due to this method, it cannot shift the courses in the textField

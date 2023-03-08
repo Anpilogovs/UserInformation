@@ -11,9 +11,9 @@ extension UIBarButtonItem {
     
     static func createCustomButton(vc: UIViewController, selector: Selector) -> UIBarButtonItem {
         
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "left-chevron")?.withRenderingMode(.alwaysTemplate),
-                        for: .normal)
+        let button = UIButton(type: .custom)
+//        let image = UIImage(named: "back.png")?.withRenderingMode(.alwaysOriginal)
+//        button.setImage(image, for: .normal)
         button.setTitle("Back", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 17)
         button.tintColor = .systemBlue
@@ -30,6 +30,7 @@ extension UIBarButtonItem {
         }
         
         let barItem = UIBarButtonItem(customView: button)
+    
         return barItem
     }
 }

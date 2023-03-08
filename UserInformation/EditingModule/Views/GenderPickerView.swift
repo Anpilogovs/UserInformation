@@ -36,14 +36,14 @@ extension GenderPickerView: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        Recoursec.Ganger.allCases.count
+        Resoursec.Ganger.allCases.count
     }
 }
 
 extension GenderPickerView: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        Recoursec.Ganger.allCases[row].rawValue
+        Resoursec.Ganger.allCases[row].rawValue
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

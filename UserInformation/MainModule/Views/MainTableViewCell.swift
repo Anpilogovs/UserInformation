@@ -16,7 +16,7 @@ class MainTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textAlignment = .right
         label.text = "Test"
-        label.font = Recoursec.Fonts.avenirNextRegular(with: 18)
+        label.font = Resoursec.Fonts.avenirNextRegular(with: 18)
         label.numberOfLines = 0
         return label
     }()
@@ -38,7 +38,7 @@ class MainTableViewCell: UITableViewCell {
     private func setupViews() {
         selectionStyle = .none
         
-        nameLabel.font = Recoursec.Fonts.avenirNextRegular(with: 18)
+        nameLabel.font = Resoursec.Fonts.avenirNextRegular(with: 18)
         
         addView(nameLabel)
         addView(valueLabel)
@@ -46,7 +46,8 @@ class MainTableViewCell: UITableViewCell {
     
     public func configure(name: String, value: String) {
         nameLabel.text = name
-        valueLabel.text = value
+        valueLabel.text = value == "" ? "No data" : value
+        
     }
 }
 

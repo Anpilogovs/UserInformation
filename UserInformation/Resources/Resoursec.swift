@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Recoursec {
+enum Resoursec {
     
     enum NameFields: String, CaseIterable {
         case firstName = "Name"

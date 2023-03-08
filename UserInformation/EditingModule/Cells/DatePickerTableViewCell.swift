@@ -36,7 +36,7 @@ final class DatePickerTableViewCell: UITableViewCell {
     private func setupViews() {
         selectionStyle = .none
         
-        nameLabel.font = Recoursec.Fonts.avenirNextRegular(with: 18)
+        nameLabel.font = Resoursec.Fonts.avenirNextRegular(with: 18)
         addView(nameLabel)
         contentView.addView(datePicker)
     }

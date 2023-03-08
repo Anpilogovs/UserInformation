@@ -30,7 +30,7 @@ final class PickerViewTableViewCell: UITableViewCell {
     private func setupViews() {
         selectionStyle = .none
         
-        nameLabel.font = Recoursec.Fonts.avenirNextRegular(with: 18)
+        nameLabel.font = Resoursec.Fonts.avenirNextRegular(with: 18)
         addView(nameLabel)
         genderPickerView.genderDelegate = self
         genderTextField.inputView = genderPickerView
@@ -52,7 +52,7 @@ final class PickerViewTableViewCell: UITableViewCell {
 
 extension PickerViewTableViewCell: GenderPickerViewProtocol {
     func didSelect(row: Int) {
-        genderTextField.text = Recoursec.Ganger.allCases[row].rawValue
+        genderTextField.text = Resoursec.Ganger.allCases[row].rawValue
         genderTextField.resignFirstResponder()
     }
 }

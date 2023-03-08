@@ -22,6 +22,6 @@ class NameTextView: UITextView {
         textColor = .lightGray
         textAlignment = .right
         isScrollEnabled = false
-        font = Recoursec.Fonts.avenirNextRegular(with: 18)
+        font = Resoursec.Fonts.avenirNextRegular(with: 18)
     }
 }

@@ -17,8 +17,7 @@ final class MainTableViewController: UITableViewController {
         setupViews()
         getUserModel()
         //        tableView.register(MainTableViewCell.self,
-        //                           forCellReuseIdentifier: MainTableViewCell.idMainTableViewCell)
-        
+        //                          forCellReuseIdentifier: MainTableViewCell.idMainTableViewCell)
         tableView.register(MainTableViewCell.self)
     }
     
@@ -42,8 +41,20 @@ final class MainTableViewController: UITableViewController {
         userModel = UserDefaultsHelper.getUserModel()
     }
     
-    private func changeUserModel(model: UserModel) {
-        print(model)
+    private func saveEditModel(_ model: UserModel) {
+        UserDefaultsHelper.saveUserValue(Resoursec.NameFields.firstName.rawValue, value: model.firstName)
+        UserDefaultsHelper.saveUserValue(Resoursec.NameFields.secondName.rawValue, value: model.secondName)
+        UserDefaultsHelper.saveUserValue(Resoursec.NameFields.thirdName.rawValue, value: model.thirdName)
+        UserDefaultsHelper.saveUserValue(Resoursec.NameFields.birthDay.rawValue, value: model.birthDay)
+        UserDefaultsHelper.saveUserValue(Resoursec.NameFields.gender.rawValue, value: model.gender)
+    }
+    
+    public func changeUserModel(model: UserModel) {
+       //Save model
+        saveEditModel(model)
+        //RefreshLabel
+        userModel = model
+        tableView.reloadData()
     }
 }
 //MARK: - UITableViewController
@@ -51,7 +62,7 @@ final class MainTableViewController: UITableViewController {
 extension MainTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Recoursec.NameFields.allCases.count
+        return Resoursec.NameFields.allCases.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,8 +71,8 @@ extension MainTableViewController {
             return UITableViewCell()
         }
         
-        let nameFiled = Recoursec.NameFields.allCases[indexPath.row].rawValue
-        let value = UserDefaultsHelper.getUserValue(Recoursec.NameFields.allCases[indexPath.row].rawValue)
+        let nameFiled = Resoursec.NameFields.allCases[indexPath.row].rawValue
+        let value = UserDefaultsHelper.getUserValue(Resoursec.NameFields.allCases[indexPath.row].rawValue)
         cell.configure(name: nameFiled, value: value)
         return cell
     }

@@ -61,12 +61,12 @@ final class EditingTableView: UITableView {
 extension EditingTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Recoursec.NameFields.allCases.count
+        return Resoursec.NameFields.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let nameFiled = Recoursec.NameFields.allCases[indexPath.row].rawValue
+        let nameFiled = Resoursec.NameFields.allCases[indexPath.row].rawValue
         
         switch indexPath.row {
         case 0...2:

@@ -47,12 +47,9 @@ final class EditingViewController: UIViewController {
     
     @objc private func saveTapped() {
         
+        let editUserModel = editingTableView.getUserModel()
         
-//
-//        let editUserModel = editingTableView.getUserModel()
-//        print(editUserModel == userModel)
-//
-        if authFields() {
+        if authFields(model: editUserModel) {
             presentSimpleAlert(title: "done", message: "Fill all the obligatory fields")
         } else {
             presentSimpleAlert(title: "Erro", message: "fill in the fields Full Name")
@@ -61,13 +58,18 @@ final class EditingViewController: UIViewController {
     
     @objc private func backButtonTapped() {
         
-        let editUserModel = editingTableView.getUserModel
+        let editUserModel = editingTableView.getUserModel()
+        
         if editUserModel == userModel {
             navigationController?.popViewController(animated: true)
         } else {
-            presentChangeAlert { value in
+            presentChangeAlert { [weak self] value in
+                guard let self = self else { return }
                 //Model
-                if value == true {
+                if value {
+                    guard let firstVC = self.navigationController?.viewControllers.first as? MainTableViewController else { return
+                    }
+                    firstVC.changeUserModel(model: editUserModel)
                     self.navigationController?.popViewController(animated: true)
                 } else {
                     self.navigationController?.popViewController(animated: true)
@@ -76,15 +78,15 @@ final class EditingViewController: UIViewController {
         }
     }
     
-    private func authFields() -> Bool {
-        if userModel.firstName != "" ||
-            userModel.secondName != "" ||
-            userModel.birthDay != "" ||
-            userModel.gender != "" ||
-            userModel.gender != "Not pointed" {
-            return true
+    private func authFields(model: UserModel) -> Bool {
+        if model.firstName == "Enter the data" ||
+            model.secondName == "Enter the data" ||
+            model.birthDay == "" ||
+            model.gender == "" ||
+            model.gender == "Not pointed" {
+            return false
         }
-        return false
+        return true
     }
 }
 

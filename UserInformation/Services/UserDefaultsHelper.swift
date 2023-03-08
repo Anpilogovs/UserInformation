@@ -26,11 +26,11 @@ final class UserDefaultsHelper {
         var userModel = UserModel()
         
         let userDictionary = getUserDictionary()
-        userModel.firstName = userDictionary[Recoursec.NameFields.firstName.rawValue] ?? ""
-        userModel.secondName = userDictionary[Recoursec.NameFields.secondName.rawValue] ?? ""
-        userModel.thirdName = userDictionary[Recoursec.NameFields.thirdName.rawValue] ?? ""
-        userModel.birthDay = userDictionary[Recoursec.NameFields.birthDay.rawValue] ?? ""
-        userModel.gender = userDictionary[Recoursec.NameFields.gender.rawValue] ?? ""
+        userModel.firstName = userDictionary[Resoursec.NameFields.firstName.rawValue] ?? ""
+        userModel.secondName = userDictionary[Resoursec.NameFields.secondName.rawValue] ?? ""
+        userModel.thirdName = userDictionary[Resoursec.NameFields.thirdName.rawValue] ?? ""
+        userModel.birthDay = userDictionary[Resoursec.NameFields.birthDay.rawValue] ?? ""
+        userModel.gender = userDictionary[Resoursec.NameFields.gender.rawValue] ?? ""
         
         return userModel
     }

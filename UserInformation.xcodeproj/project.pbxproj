@@ -14,7 +14,7 @@
 		F3B2D01829AD12E2006F8139 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2D01729AD12E2006F8139 /* MainTableViewController.swift */; };
 		F3B2D01D29AD12E5006F8139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B2D01C29AD12E5006F8139 /* Assets.xcassets */; };
 		F3B2D02029AD12E5006F8139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3B2D01E29AD12E5006F8139 /* LaunchScreen.storyboard */; };
-		F3B2D02D29AD1878006F8139 /* Recoursec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2D02C29AD1878006F8139 /* Recoursec.swift */; };
+		F3B2D02D29AD1878006F8139 /* Resoursec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2D02C29AD1878006F8139 /* Resoursec.swift */; };
 		F3B2D03029AD19DB006F8139 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2D02F29AD19DB006F8139 /* MainTableViewCell.swift */; };
 		F3B2D03329AD1B19006F8139 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2D03229AD1B19006F8139 /* UIView + Extensions.swift */; };
 		F3B2D03829AD2349006F8139 /* EditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2D03729AD2349006F8139 /* EditingViewController.swift */; };
@@ -42,7 +42,7 @@
 		F3B2D01C29AD12E5006F8139 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3B2D01F29AD12E5006F8139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3B2D02129AD12E5006F8139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3B2D02C29AD1878006F8139 /* Recoursec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recoursec.swift; sourceTree = "<group>"; };
+		F3B2D02C29AD1878006F8139 /* Resoursec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resoursec.swift; sourceTree = "<group>"; };
 		F3B2D02F29AD19DB006F8139 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		F3B2D03229AD1B19006F8139 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		F3B2D03729AD2349006F8139 /* EditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 			children = (
 				F3B2D02929AD15F6006F8139 /* MainModule */,
 				F3B2D02729AD1421006F8139 /* Application */,
-				F3B2D03529AD232D006F8139 /* EditingModul */,
+				F3B2D03529AD232D006F8139 /* EditingModule */,
 				F3B2D04E29AFDFC6006F8139 /* Services */,
 				F3B2D02B29AD182B006F8139 /* Resources */,
 				F3B2D03129AD1AFE006F8139 /* Exntension */,
@@ -141,7 +141,7 @@
 		F3B2D02B29AD182B006F8139 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F3B2D02C29AD1878006F8139 /* Recoursec.swift */,
+				F3B2D02C29AD1878006F8139 /* Resoursec.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -175,14 +175,14 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		F3B2D03529AD232D006F8139 /* EditingModul */ = {
+		F3B2D03529AD232D006F8139 /* EditingModule */ = {
 			isa = PBXGroup;
 			children = (
 				F3B2D03B29AE05F3006F8139 /* Views */,
 				F3B2D03C29AE05F8006F8139 /* Cells */,
 				F3B2D03629AD233A006F8139 /* Controllers */,
 			);
-			path = EditingModul;
+			path = EditingModule;
 			sourceTree = "<group>";
 		};
 		F3B2D03629AD233A006F8139 /* Controllers */ = {
@@ -305,7 +305,7 @@
 				F3B2D01829AD12E2006F8139 /* MainTableViewController.swift in Sources */,
 				F3B2D03829AD2349006F8139 /* EditingViewController.swift in Sources */,
 				F3B2D04029AE53EC006F8139 /* NameTextView.swift in Sources */,
-				F3B2D02D29AD1878006F8139 /* Recoursec.swift in Sources */,
+				F3B2D02D29AD1878006F8139 /* Resoursec.swift in Sources */,
 				F3B2D04629AE7FC3006F8139 /* GenderPickerView.swift in Sources */,
 				F3B2D03029AD19DB006F8139 /* MainTableViewCell.swift in Sources */,
 				F3B2D03329AD1B19006F8139 /* UIView + Extensions.swift in Sources */,

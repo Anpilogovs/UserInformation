@@ -37,7 +37,7 @@ final class TextViewTableViewCell: UITableViewCell {
     private func setupViews() {
         selectionStyle = .none
         
-        nameLabel.font = Recoursec.Fonts.avenirNextRegular(with: 18)
+        nameLabel.font = Resoursec.Fonts.avenirNextRegular(with: 18)
         addView(nameLabel)
         contentView.addView(nameTextView)
         nameTextView.delegate = self
@@ -46,8 +46,8 @@ final class TextViewTableViewCell: UITableViewCell {
     public func configure(name: String, scrollEnable: Bool, value: String) {
         nameLabel.text = name
         nameTextView.isScrollEnabled = scrollEnable
-        nameTextView.text = value
-        nameTextView.textColor  = .black
+        nameTextView.text = value == "" ? "Enter the data" : value
+        nameTextView.textColor = value == "" ? .lightGray : .black
     }
     
     public func getCellValue() -> String {
